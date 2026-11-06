@@ -1,0 +1,78 @@
+# ===================================================
+# .gitignore - WFH Absent App (Monorepo)
+# ===================================================
+
+# 1. Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.cert
+id_rsa
+credentials.json
+
+# 2. Dependencies
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# 3. Build & Compilation Outputs
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+*.tsbuildinfo
+
+# 4. User Uploaded Files (Photos of attendance, personal data)
+uploads/*
+**/uploads/*
+!uploads/.gitkeep
+!**/uploads/.gitkeep
+
+# 5. Logs & Temporary Files
+logs/
+*.log
+*.zip
+.temp/
+.tmp/
+tmp/
+
+# 6. Testing & Coverage
+coverage/
+**/coverage/
+.nyc_output/
+
+# 7. IDE & Editor specific files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 8. OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# 9. Internal Documents
+docs/
+AGENTS.md
